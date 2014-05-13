@@ -30,7 +30,7 @@ module Sharrando
       "https://plus.google.com/share?url=#{url}&t=#{text}"
     end
 
-    def tumblr(data_type: data_type, contents: contents = {})
+    def tumblr(data_type: data_type, contents: contents)
       raise ArgumentError, "Data type must be <link>, <text>, <photo> or <quote>" unless %i(link text photo quote).include? data_type
       
       "http://www.tumblr.com/share/#{data_type}?".tap do |url|
