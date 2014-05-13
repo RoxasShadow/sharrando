@@ -1,6 +1,6 @@
 Sharrando
 =========
-Get URLs for share things to social networks like Facebook, Twitter, Linkedin, Tumblr, etc.
+Get URLs to share things in social networks like Facebook, Twitter, Linkedin, Tumblr, etc.
 
 Install
 -------
