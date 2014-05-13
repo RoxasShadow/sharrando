@@ -7,8 +7,8 @@ Gem::Specification.new { |s|
   s.email         = 'webmaster@giovannicapuano.net'
   s.homepage      = 'http://www.giovannicapuano.net'
   s.platform      = Gem::Platform::RUBY
-  s.summary       = 'Get URLs for share things to the social networks.'
-  s.description   = 'Get URLs for share things to social networks like Facebook, Twitter, Linkedin, Tumblr, etc.'
+  s.summary       = 'Get URLs to share things in social networks.'
+  s.description   = 'Get URLs to share things in social networks like Facebook, Twitter, Linkedin, Tumblr, etc.'
   s.licenses      = 'WTFPL'
 
   s.require_paths = ['lib']
