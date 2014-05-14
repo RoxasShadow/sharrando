@@ -45,5 +45,11 @@ module Sharrando
     def linkedin(url: url, title: title, description: description, source: source)
       "http://www.linkedin.com/shareArticle?mini=true&url=#{url}&title=#{title}&summary=#{description}&source=#{source}"
     end
+
+    class << self
+      def list
+        %i(email twitter facebook google_plus tumblr delicious linkedin)
+      end
+    end
   end
 end

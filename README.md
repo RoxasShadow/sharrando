@@ -4,7 +4,7 @@ Get URLs to share things in social networks like Facebook, Twitter, Linkedin, Tu
 
 Install
 -------
-`gem install sharrando`
+`$ gem install sharrando`
 
 Example
 -------
@@ -12,6 +12,9 @@ Example
 require 'sharrando'
 include Sharrando
 
-url = sharrando_social_url(:facebook, title: 'Sharrando', url: 'http://github.com/RoxasShadow/sharrando')
+url = sharrando_on(:facebook, title: 'Sharrando', url: 'http://github.com/RoxasShadow/sharrando')
 puts "<a href=\"#\" onclick=\"window.open('#{url}');\">Share on Facebook!</a>"
+
+url = sharrando_on_twitter(text: 'Ma quanto spigne sharrando')
+puts "<a href=\"#\" onclick=\"window.open('#{url}');\">Share on Twitter!</a>"
 ```
