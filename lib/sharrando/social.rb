@@ -46,9 +46,13 @@ module Sharrando
       "http://www.linkedin.com/shareArticle?mini=true&url=#{url}&title=#{title}&summary=#{description}&source=#{source}"
     end
 
+    def pocket(url: url)
+      "https://getpocket.com/save?url=#{url}"
+    end
+
     class << self
       def list
-        %i(email twitter facebook google_plus tumblr delicious linkedin)
+        %i(email twitter facebook google_plus tumblr delicious linkedin pocket)
       end
     end
   end
