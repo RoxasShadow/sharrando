@@ -10,15 +10,15 @@
 
 module Sharrando
   class Social
-    def email(subject: subject, body: body)
+    def email(subject: '', body: '')
       "mailto:?to=&subject=#{subject}&body=#{body.gsub("\n", "%0D%0A")}"
     end
 
-    def twitter(text: text)
+    def twitter(text: '')
       "https://twitter.com/home?status=#{text}"
     end
 
-    def facebook(title: title, url: url, description: description, image: image)
+    def facebook(title: '', url: '', description: '', image: '')
       if !description || description.empty?
         "http://www.facebook.com/sharer.php?t=#{title}&u=#{url}"
       else
@@ -26,11 +26,11 @@ module Sharrando
       end
     end
 
-    def google_plus(url: url, text: text)
+    def google_plus(url: '', text: '')
       "https://plus.google.com/share?url=#{url}&t=#{text}"
     end
 
-    def tumblr(data_type: data_type, contents: contents)
+    def tumblr(data_type: '', contents: '')
       raise ArgumentError, "Data type must be <link>, <text>, <photo> or <quote>" unless %i(link text photo quote).include? data_type
 
       "http://www.tumblr.com/share/#{data_type}?".tap do |url|
@@ -38,23 +38,23 @@ module Sharrando
       end
     end
 
-    def delicious(url: url, title: title)
+    def delicious(url: '', title: '')
       "http://www.delicious.com/save?url=#{url}&title=#{title}&jump=yes&pic=#{image}"
     end
 
-    def linkedin(url: url, title: title, description: description, source: source)
+    def linkedin(url: '', title: '', description: '', source: '')
       "http://www.linkedin.com/shareArticle?mini=true&url=#{url}&title=#{title}&summary=#{description}&source=#{source}"
     end
 
-    def pocket(url: url)
+    def pocket(url: '')
       "https://getpocket.com/save?url=#{url}"
     end
 
-    def pinterest(url: url, image: image, description: description)
+    def pinterest(url: '', image: '', description: '')
       "http://pinterest.com/pin/create/button/?url=#{url}&media=#{image}&description=#{description}"
     end
 
-    def whatsapp(description: description)
+    def whatsapp(description: '')
       "whatsapp://send?text=#{description}"
     end
 
