@@ -1,7 +1,7 @@
 #! /usr/bin/env ruby
 require 'rake'
 
-task :default => [ :install, :test ]
+task default: [ :install, :test ]
 
 task :install do
   sh 'gem install rspec'

@@ -32,7 +32,7 @@ module Sharrando
 
     def tumblr(data_type: data_type, contents: contents)
       raise ArgumentError, "Data type must be <link>, <text>, <photo> or <quote>" unless %i(link text photo quote).include? data_type
-      
+
       "http://www.tumblr.com/share/#{data_type}?".tap do |url|
         (contents ||= {}).each { |key, val| url << "#{key}=#{CGI::escape(val)}&"}
       end
@@ -50,9 +50,17 @@ module Sharrando
       "https://getpocket.com/save?url=#{url}"
     end
 
+    def pinterest(url: url, image: image, description: description)
+      "http://pinterest.com/pin/create/button/?url=#{url}&media=#{image}&description=#{description}"
+    end
+
+    def whatsapp(description: description)
+      "whatsapp://send?text=#{description}"
+    end
+
     class << self
       def list
-        %i(email twitter facebook google_plus tumblr delicious linkedin pocket)
+        %i(email twitter facebook google_plus tumblr delicious linkedin pocket pinterest whatsapp)
       end
     end
   end
